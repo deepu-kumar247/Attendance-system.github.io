@@ -1,0 +1,130 @@
+/* General Body and Container Styles */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1A237E 0%, #0D47A1 100%); /* Deep blue gradient */
+    color: #fff;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.15); /* Frosted glass effect */
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    text-align: center;
+    max-width: 600px; /* Ensures container is not too wide on large screens */
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    animation: fadeIn 1.2s ease-out forwards;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Headings and Text */
+h1 {
+    font-size: clamp(2.5em, 5vw, 3.5em); /* Responsive font size */
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+}
+
+.subtitle {
+    font-size: clamp(1em, 2vw, 1.2em);
+    margin-top: -15px;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+/* Buttons Container */
+.buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Animated Button Styles */
+.animated-btn {
+    padding: 18px 35px;
+    border: none;
+    border-radius: 50px; /* Pill-shaped buttons */
+    font-size: clamp(1em, 2vw, 1.2em);
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.teacher-btn {
+    background: linear-gradient(45deg, #FFC107, #FF9800); /* Orange gradient */
+}
+
+.student-btn {
+    background: linear-gradient(45deg, #00BCD4, #009688); /* Teal gradient */
+}
+
+.animated-btn:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    filter: brightness(1.1);
+}
+
+.animated-btn:active {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.emoji {
+    font-size: 1.5em;
+    margin-right: 12px;
+}
+
+
+*****
+
+
+/* New: Responsive font sizing for better readability on all devices */
+h1 {
+    font-size: clamp(2.5em, 5vw, 3.5em);
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1.5px;
+}
+
+/* New: Responsive font sizing for the subtitle */
+.subtitle {
+    font-size: clamp(1em, 2vw, 1.2em);
+    margin-top: -15px;
+    margin-bottom: 40px;
+    color: #f0f0f0;
+}
+
+
+

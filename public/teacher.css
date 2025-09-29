@@ -1,0 +1,174 @@
+/* General Body and Main Container Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: #e0e0e0;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    animation: fadeIn 1s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Header and Headings */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: clamp(2em, 4vw, 3em);
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-size: clamp(1.5em, 3vw, 2em);
+    color: #a3d9ff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #a3d9ff;
+    padding-bottom: 10px;
+    text-align: center;
+}
+
+/* Panel Sections */
+.panel-section {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.panel-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Fields and Labels */
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #c9e6ff;
+}
+
+input[type="text"], input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]::placeholder, input[type="date"]::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+input[type="text"]:focus, input[type="date"]:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 3px #a3d9ff;
+}
+
+/* Buttons */
+.animated-btn {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #058298;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Generate Code Button */
+.animated-btn.generate-btn {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+    box-shadow: 0 4px 15px rgba(3, 104, 167, 0.582);
+}
+
+.animated-btn.generate-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(254, 180, 123, 0.6);
+}
+
+/* Download Button */
+.animated-btn.download-btn {
+    background: linear-gradient(45deg, #16a085, #1abc9c);
+    box-shadow: 0 4px 15px rgba(26, 188, 156, 0.4);
+}
+
+.animated-btn.download-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(26, 188, 156, 0.6);
+}
+
+.animated-btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Code Display Section */
+.code-display {
+    text-align: center;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    margin-top: 20px;
+    border: 1px dashed rgba(255, 255, 255, 0.2);
+}
+
+#display-code {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #ffeb3b;
+    letter-spacing: 2px;
+}
+
+#timer {
+    font-weight: 500;
+    color: #c0c0c0;
+}
+
+/* Responsive adjustments for info section */
+@media (min-width: 768px) {
+    .panel-section {
+        flex: 1;
+    }
+}
