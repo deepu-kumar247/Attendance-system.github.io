@@ -3,6 +3,13 @@ const mongoose = require('mongoose');
 const path = require('path');
 const { Parser } = require('json2csv');
 
+const dotenv = require("dotenv");
+
+// Load env vars
+dotenv.config();
+
+
+
 const app = express();
 const port = 3000;
 
@@ -12,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/attendance-system')
+mongoose.connect(process.env.ATLAS_DB_URL)
     .then(() => {
         console.log('MongoDB connected successfully.');
     })
@@ -148,5 +155,5 @@ app.get('/api/download-attendance', async (req, res) => {
 });
 
 app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
+    console.log(`Server is running at port:${port}`);
 });
